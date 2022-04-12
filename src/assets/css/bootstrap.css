@@ -60,7 +60,7 @@ body {
 	line-height: 1.5;
 	color: #212529;
 	text-align: left;
-	background-color: #1ABC9C;;
+	background-color: #FFF;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -5345,7 +5345,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 
 .alert-warning {
 	color: #856404;
-	background-color: #1ABC9C3cd;
+	background-color: #1ABC9C;
 	border-color: #ffeeba;
 }
 
@@ -6773,7 +6773,7 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-	background-color: #FFF !important;
+	background-color: #1ABC9C !important;
 }
 
 .bg-transparent {

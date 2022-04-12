@@ -314,13 +314,13 @@ footer .list-unstyled li a,
 
 #header.dark #primary-menu.style-2 { border-top-color: rgba(255, 255, 255, .1); }
 
-/* #header:not(:hover),
+/*#header:not(:hover),
 #header.dark:not(.transparent-header),
 #header:not(:hover) #header-wrap,
 #header.dark.sticky-header:not(.transparent-header) #header-wrap:not(.not-dark) {
 	background-color: var(--headerbg, #0F66DD);
 	border-bottom-color: rgba(255, 255, 255, .1);
-} */
+}*/
 
 
 #header-wrap .header-buttons {
