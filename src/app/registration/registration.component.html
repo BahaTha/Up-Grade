@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>button{
+        height:60px;
+        width:150px;
+        margin: -20px -50px;
+        position:relative;
+        top:50%;
+        left:50%;
+    }</style>
+<app-header></app-header>
+<style>
+	.div-2 {
+		 text-align: center ;
+   background-color: #FFF;
+   margin-left: auto;
+    margin-right: auto;
+	
+}
+</style>
+<div class="div-2">
+
+    <!-- Content
+		============================================= -->
+		<section id="slider" class="slider-element bgcolor clearfix" style="height: auto; padding: 60px 0; background: url('/assets/movers/images/bg-2.png') no-repeat center center / 100% 100%;">
+</section>
+
+
+
+				<div class="container clearfix">
+
+					<div class="form-widget">
+
+						<div class="form-result"></div>
+
+                        <div class="row">
+
+							<div class="col-lg-8">
+								<form id="car-rental" class="row" action="include/form.php" method="post" enctype="multipart/form-data">
+									<div class="form-process"></div>
+									<div class="col-12">
+										<br>	<br>	<br>	<br>	<br>
+										<label>Select a subscription type : <br>    <br>  	<br>	<br> <br> </label>
+										<div class="row car-list btn-group">
+
+											<label class="car-image pr-0 col-6 col-md-3">
+												<div class="ml-0">
+                                                    <button (click)="onPressCustomer()" class="btn btn-primary mb-2"> Customer</button>
+                                                     <br> <br>
+													<img src="/assets/images/customer.png" alt="">
+
+												</div>
+											</label>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+											<label class="car-image px-0 col-6 col-md-3">
+												<div class="ml-0">
+                                                    <button (click)="onPressDeliveryGuy()" class="btn btn-primary mb-2"> Delivery guy</button>
+                                                     <br> <br>
+													<img src="/assets/images/delivery.png" alt="">
+
+												</div>
+											</label>
+                                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;
+											<label class="car-image px-0 col-6 col-md-3">
+                                                <div class="ml-0">
+                                                   <button (click)="onPressStore()" class="btn btn-primary mb-2"> Store </button>
+
+													<img src="/assets/images/store.png" alt="">
+
+												</div>
+											</label>
+                                            <div class="div-2" id="comp-render" *ngIf="displayCustomer">
+                                                <app-register-customer></app-register-customer>
+                                             </div>
+											 
+                                             <div id="comp-render" *ngIf="displayDeliveryGuy">
+                                              <app-register-delivery-guy></app-register-delivery-guy>
+                                           </div>
+                                           <div id="comp-render" *ngIf="displayStore">
+                                            <app-register-store></app-register-store>
+                                         </div>
+
+
+										</div>
+									</div>
+								</form>
+                            </div>
+						</div> </div> </div></div>
+
+
+
+
+
+
+        <app-footer></app-footer>
+

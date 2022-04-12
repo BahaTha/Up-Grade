@@ -1,0 +1,35 @@
+<!-- 
+<div class="container">
+
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+    <p>
+      <label for="name">Store Name:</label>
+      <input type="text" id="name" name="name" formControlName="name" class="form-control">
+    </p>
+
+    <table class="table table-bordered" formArrayName="addresses">
+      <tr>
+        <th colspan="2">Add the store addresses:</th>
+        <th width="150px"><button type="button" (click)="addAddress()" class="btn btn-primary">Add More</button></th>
+      </tr>
+      <tr *ngFor="let address of addresses().controls; let i=index" [formGroupName]="i">
+       
+          <th colspan="2">
+           
+            <input type="text" formControlName="address" class="form-control" placeholder="New Address">
+       
+      </th>
+      <th width="150px">
+            <button (click)="removeAddress(i)" class="btn btn-danger">Remove</button>
+          </th>
+      </tr>
+    </table>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+
+  <br/>
+   {{this.productForm.value | json}} 
+</div> -->
