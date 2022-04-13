@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import javax.annotation.security.RolesAllowed;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,6 +20,7 @@ public class User {
 	private String lastname;
 	@Column(name="email_id")
 	private String emailId;
+	
 	@Column(name="role")
 	private Role role;
 	

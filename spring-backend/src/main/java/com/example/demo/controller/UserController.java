@@ -11,7 +11,7 @@ import com.example.demo.model.User;
 import com.example.demo.repository.UserRepository;
 
 @RestController
-@RequestMapping("/api/v1/")
+@RequestMapping("/api/v1")
 public class UserController {
 	@Autowired
 	private UserRepository userRepository;
