@@ -980,7 +980,7 @@ html[xmlns] .slider-wrap {display: block;}
 #header.transparent-header.floating-header .container {
 	width: 1190px;
 	max-width: 1190px;
-	background-color: #1ABC9C;
+	background-color: #FFF;
 	padding: 0 40px;
 	border-radius: 2px;
 }
@@ -1442,7 +1442,7 @@ body:not(.device-md):not(.device-sm):not(.device-xs) #primary-menu.style-2.cente
 #primary-menu.style-3 > ul > li.current > a {
 	color: #FFF;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-	background-color: #FFF;
+	background-color: #1ABC9C;
 }
 
 
@@ -1551,7 +1551,7 @@ body:not(.device-md):not(.device-sm):not(.device-xs) #primary-menu.style-2.cente
 #primary-menu.sub-title > ul > li.current > a,
 #primary-menu.sub-title > div > ul > li:hover > a,
 #primary-menu.sub-title > div > ul > li.current > a {
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	color: #FFF;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 	border-top-color: rgba(0,0,0,0.1);
@@ -1863,7 +1863,7 @@ body:not(.device-md):not(.device-sm):not(.device-xs) #header.transparent-header:
 	height: 16px;
 	line-height: 16px;
 	text-align: center;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	border-radius: 50%;
 }
 
@@ -2216,7 +2216,7 @@ body.top-search-open #top-account { opacity: 0; }
 
 #page-menu-wrap {
 	z-index: 99;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	-webkit-transform: translate3d(0,0,0);
 	-ms-transform: translate3d(0,0,0);
 	-o-transform: translate3d(0,0,0);
@@ -2310,7 +2310,7 @@ body:not(.device-touch) #page-menu nav li a {
 	left: 0;
 	z-index: 149;
 	height: auto;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 }
 
 #page-menu ul ul ul { display: none !important; } /* Disable Multi-Level Links */
@@ -2384,14 +2384,14 @@ body:not(.device-touch) #page-menu nav li a {
 
 	#page-menu.dots-menu nav li a:hover { background-color: rgba(0,0,0,0.7) }
 
-	#page-menu.dots-menu nav li.current a { background-color: #FFF; }
+	#page-menu.dots-menu nav li.current a { background-color: #1ABC9C; }
 
 	#page-menu.dots-menu nav li div {
 		position: absolute;
 		width: auto;
 		top: -11px;
 		right: 25px;
-		background-color: #FFF;
+		background-color: #1ABC9C;
 		color: #FFF;
 		padding: 5px 14px;
 		white-space: nowrap;
@@ -3031,7 +3031,7 @@ body:not(.stretched) .slider-parallax .slider-parallax-inner { left: auto; }
 }
 
 .swiper-pagination span:hover,
-.swiper-pagination span.swiper-pagination-bullet-active { background-color: #1ABC9C !important; }
+.swiper-pagination span.swiper-pagination-bullet-active { background-color: #FFF !important; }
 
 
 /* Revolution Slider
@@ -3331,7 +3331,7 @@ body:not(.stretched) .slider-parallax .slider-parallax-inner { left: auto; }
 }
 
 .slider-element .owl-dots .owl-dot.active,
-.slider-element .owl-dots .owl-dot:hover { background-color: #1ABC9C !important; }
+.slider-element .owl-dots .owl-dot:hover { background-color: #FFF !important; }
 
 
 /* ----------------------------------------------------------------
@@ -3595,7 +3595,7 @@ body:not(.device-touch) .grid-container {
 
 .portfolio-filter li.activeFilter a {
 	color: #FFF !important;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	margin: -1px 0;
 	padding: 13px 18px;
 	font-weight: bold;
@@ -3687,7 +3687,7 @@ body:not(.device-touch) .grid-container {
 .portfolio-filter.style-4 li.activeFilter a:after {
 	width: 100%;
 	left: 0%;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 }
 
 
@@ -3722,7 +3722,7 @@ body:not(.device-touch) .grid-container {
 }
 
 .portfolio-shuffle:hover {
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	color: #FFF;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
@@ -4992,7 +4992,7 @@ body:not(.device-touch) .entry-link {
 
 .entry-link:hover {
 	color: #FFF;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
@@ -5951,7 +5951,7 @@ body:not(.device-touch):not(.device-sm):not(.device-xs) .product-overlay a {
 	top: 10px;
 	left: 10px;
 	padding: 6px 10px;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	color: #FFF;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 	border-radius: 2px;
@@ -6592,7 +6592,7 @@ body:not(.device-sm):not(.device-xs) .countdown.countdown-large.coming-soon .cou
 	font-size: 14px;
 	height: 40px;
 	line-height: 40px;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	color: #FFF;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -6621,7 +6621,7 @@ body:not(.device-touch) .button {
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
-.button.button-dark:hover { background-color: #FFF; }
+.button.button-dark:hover { background-color: #1ABC9C; }
 
 .button.button-mini {
 	padding: 0 14px;
@@ -7332,7 +7332,7 @@ body:not(.device-touch) .button.button-full strong {
 /* Promo - Flat
 -----------------------------------------------------------------*/
 
-.promo.promo-flat { background-color: #FFF; }
+.promo.promo-flat { background-color: #1ABC9C; }
 
 .promo.promo-flat > span,
 .promo.promo-flat > .container > span { color: rgba(255,255,255,0.9); }
@@ -7487,7 +7487,7 @@ body:not(.device-touch) .button.button-full strong {
 .feature-box .fbox-icon i,
 .feature-box .fbox-icon img {
 	border-radius: 50%;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 }
 
 .feature-box .fbox-icon i {
@@ -7932,7 +7932,7 @@ body:not(.device-touch) .button.button-full strong {
 .fbox-effect.fbox-dark .fbox-icon i:after { box-shadow: 0 0 0 2px #1ABC9C; }
 
 .fbox-effect.fbox-dark .fbox-icon i:hover,
-.fbox-effect.fbox-dark:hover .fbox-icon i { background-color: #FFF; }
+.fbox-effect.fbox-dark:hover .fbox-icon i { background-color: #1ABC9C; }
 
 .fbox-effect .fbox-icon i:hover:after,
 .fbox-effect:hover .fbox-icon i:after {
@@ -7986,7 +7986,7 @@ body:not(.device-touch) .button.button-full strong {
 .fbox-border.fbox-effect.fbox-dark .fbox-icon i:hover,
 .fbox-border.fbox-effect.fbox-dark:hover .fbox-icon i { box-shadow: 0 0 0 1px #1ABC9C; }
 
-.fbox-border.fbox-effect.fbox-dark .fbox-icon i:after { background-color: #FFF; }
+.fbox-border.fbox-effect.fbox-dark .fbox-icon i:after { background-color: #1ABC9C; }
 
 .fbox-border.fbox-effect .fbox-icon i:hover:after,
 .fbox-border.fbox-effect:hover .fbox-icon i:after {
@@ -8304,7 +8304,7 @@ body:not(.device-touch) .social-icon {
 
 .i-rounded:hover,
 .i-circled:hover {
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	color: #FFF;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 	box-shadow: 0 0 0 rgba(0,0,0,0.2);
@@ -9233,7 +9233,7 @@ ul.tab-nav.tab-nav2 li a {
 
 ul.tab-nav.tab-nav2 li.ui-state-active a {
 	top: 0;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	color: #FFF;
 }
 
@@ -9788,7 +9788,7 @@ body:not(.device-touch) .clients-grid li a {
 	width: 6px !important;
 	height: 6px !important;
 	border: none;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	opacity: 0.5;
 }
 
@@ -10322,7 +10322,7 @@ body:not(.device-touch) .rounded-skill {
 	left: 0;
 	width: 0;
 	height: 100%;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	overflow: visible !important;
 	border-radius: 2px;
 	-webkit-transition: width 1.2s ease-in-out;
@@ -10774,7 +10774,7 @@ blockquote.float-right {
 	margin: 30px 4px 0 4px;
 	opacity: 0.5;
 	border-radius: 50%;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	-webkit-transition: all .3s ease;
 	-o-transition: all .3s ease;
 	transition: all .3s ease;
@@ -11070,7 +11070,7 @@ body:not(.device-touch) .text-overlay {
 	font-size: 15px;
 	line-height: 1.42857143;
 	color: #555555;
-	background-color: #1ABC9Cfff;
+	background-color: #ffffff;
 	background-image: none;
 	border: 2px solid #DDD;
 	border-radius: 0 !important;
@@ -11725,7 +11725,7 @@ body:not(.device-touch) #gotoTop {
 
 .stretched #gotoTop { bottom: 30px; }
 
-#gotoTop:hover { background-color: #FFF; }
+#gotoTop:hover { background-color: #1ABC9C; }
 
 
 /* ----------------------------------------------------------------
@@ -12475,7 +12475,7 @@ body:not(.device-touch) .tagcloud a {
 
 .widget-filter-links li.active-filter span {
 	color: #FFF;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 }
 
@@ -12813,7 +12813,7 @@ body:not(.device-touch) .tagcloud a {
 
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
-.nav-pills > li.active > a:focus { background-color: #FFF; }
+.nav-pills > li.active > a:focus { background-color: #1ABC9C; }
 
 label.radio,
 label.checkbox { padding-left: 20px; }
@@ -13933,5 +13933,4 @@ body:not(.no-transition) #wrapper,
 	-webkit-text-stroke: 0px !important;
 	text-shadow: none !important;
 }
-
 

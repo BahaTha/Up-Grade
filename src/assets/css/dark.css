@@ -578,7 +578,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 .dark .button-dark:not(.button-border),
 .dark .button:hover { background-color: rgba(0,0,0,0.3); }
 
-.dark .button-dark:hover { background-color: #FFF; }
+.dark .button-dark:hover { background-color: #1ABC9C; }
 
 .dark .button-light:not(.button-border):hover { background-color: #282828; }
 
@@ -660,7 +660,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 .dark .fbox-effect.fbox-dark .fbox-icon i:after { box-shadow: 0 0 0 2px #1ABC9C; }
 
 .dark .fbox-effect.fbox-dark .fbox-icon i:hover,
-.dark .fbox-effect.fbox-dark:hover .fbox-icon i { background-color: #FFF; }
+.dark .fbox-effect.fbox-dark:hover .fbox-icon i { background-color: #1ABC9C; }
 
 .dark .fbox-border.fbox-effect .fbox-icon i:hover,
 .dark .fbox-border.fbox-effect:hover .fbox-icon i { box-shadow: 0 0 0 1px #494949; }
@@ -670,7 +670,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 .dark .fbox-border.fbox-effect.fbox-dark .fbox-icon i:hover,
 .dark .fbox-border.fbox-effect.fbox-dark:hover .fbox-icon i { box-shadow: 0 0 0 1px #1ABC9C; }
 
-.dark .fbox-border.fbox-effect.fbox-dark .fbox-icon i:after { background-color: #FFF; }
+.dark .fbox-border.fbox-effect.fbox-dark .fbox-icon i:after { background-color: #1ABC9C; }
 
 .dark .process-steps li .i-bordered { background-color: #494949; }
 
@@ -704,7 +704,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 
 .dark .i-rounded:hover,
 .dark .i-circled:hover {
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	color: #FFF;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 	box-shadow: 0 0 0 rgba(0,0,0,0.2);
@@ -797,7 +797,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 
 .dark ul.tab-nav.tab-nav2 li a { background-color: rgba(0,0,0,0.2); }
 
-.dark ul.tab-nav.tab-nav2 li.ui-state-active a { background-color: #FFF; }
+.dark ul.tab-nav.tab-nav2 li.ui-state-active a { background-color: #1ABC9C; }
 
 .dark .tabs-bordered .tab-container { border-color: #494949; }
 
@@ -1072,7 +1072,7 @@ body #side-panel.dark #side-panel-trigger-close a {
 
 .dark .tagcloud a:hover {
 	border-color: transparent !important;
-	background-color: #FFF;
+	background-color: #1ABC9C;
 	color: #FFF !important;
 }
 
@@ -1686,4 +1686,3 @@ body #side-panel.dark #side-panel-trigger-close a {
 	.dark .pricing-box.pricing-extended .pricing-action-area { border-top-color: rgba(255,255,255,0.15); }
 
 }
-

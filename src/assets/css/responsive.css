@@ -634,7 +634,7 @@
 		left: auto;
 		right: 15px;
 		height: auto;
-		background-color: #FFF;
+		background-color: #1ABC9C;
 		z-index: 11;
 	}
 
@@ -1774,4 +1774,3 @@ only screen and (                min-resolution: 2dppx) and (max-width: 991.98px
 	#logo a.standard-logo { display: none; }
 	#logo a.retina-logo { display: inline-block; }
 }
-
