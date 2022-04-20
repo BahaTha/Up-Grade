@@ -1,8 +1,9 @@
-package com.example.demo.model;
+package com.example.demo.entity;
 
-import javax.annotation.security.RolesAllowed;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,6 +23,7 @@ public class User {
 	private String emailId;
 	
 	@Column(name="role")
+	@Enumerated(EnumType.STRING)
 	private Role role;
 	
 	public User(String firstname, String lastname, String emailId, Role role) {
