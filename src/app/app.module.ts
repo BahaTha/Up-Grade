@@ -14,7 +14,6 @@ import { RegisterCustomerComponent } from './registration/register-customer/regi
 import { RegisterDeliveryGuyComponent } from './registration/register-delivery-guy/register-delivery-guy.component';
 import { RegisterStoreComponent } from './registration/register-store/register-store.component';
 import { AddressesFormComponent } from './registration/register-store/addresses-form/addresses-form.component';
-import { AdminDarkComponent } from './admin-dark/admin-dark.component';
 import { Login1Component } from './login1/login1.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ProfileComponent } from './user-profile/profile/profile.component';
@@ -27,7 +26,7 @@ const appRoutes : Routes = [
   { path : 'home' , component: HomeComponent},
   { path : 'home/user-profile' , component: UserProfileComponent},
   {path : 'admin', component: AdminComponent},
-  {path : 'admin-dark', component: AdminDarkComponent},
+  {path : 'admin-dark', component: AdminComponent},
   {path : '', component: HomeComponent},
   {path : 'header',component: HeaderComponent},
   {path : 'register/customer',component: RegisterCustomerComponent},
@@ -49,14 +48,12 @@ const appRoutes : Routes = [
     RegisterDeliveryGuyComponent,
     RegisterStoreComponent,
     AddressesFormComponent,
-    AdminDarkComponent,
     Login1Component,
     UserProfileComponent,
     ProfileComponent,
     SettingsComponent,
     TimelineComponent,
-    TasksComponent
-
+    TasksComponent,
   ],
   imports: [
     BrowserModule,
