@@ -40,4 +40,5 @@ public class UserController {
 	public List<User> getUsersByRole(Role role){
 		return userRepository.getUsersByRole(role);
 	}
+	
 }
