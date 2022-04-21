@@ -6491,6 +6491,7 @@ body:not(.device-sm):not(.device-xs) .countdown.countdown-large.coming-soon .cou
 	cursor: pointer;
 	outline: none;
 	white-space: nowrap;
+	background-color: #FFF;
 	margin: 5px;
 	padding: 0 22px;
 	font-size: 14px;
@@ -10972,7 +10973,7 @@ body:not(.device-touch) .text-overlay {
 	font-size: 15px;
 	line-height: 1.42857143;
 	color: #555555;
-	background-color: #6cc6fafff;
+	background-color: #eeeeee;
 	background-image: none;
 	border: 2px solid #DDD;
 	border-radius: 0 !important;
