@@ -21,6 +21,7 @@ import { SettingsComponent } from './user-profile/settings/settings.component';
 import { TimelineComponent } from './user-profile/timeline/timeline.component';
 import { TasksComponent } from './user-profile/tasks/tasks.component';
 import { ExtraRegisterComponent } from './extra-register/extra-register.component';
+import { AllCoursesComponent } from './all-courses/all-courses.component';
 
 const appRoutes : Routes = [
   { path : 'home' , component: HomeComponent},
@@ -54,6 +55,7 @@ const appRoutes : Routes = [
     SettingsComponent,
     TimelineComponent,
     TasksComponent,
+    AllCoursesComponent,
   ],
   imports: [
     BrowserModule,
