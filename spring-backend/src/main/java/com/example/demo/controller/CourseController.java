@@ -1,29 +1,26 @@
-package Resources;
+package com.example.demo.controller;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import Services.CourseService;
 import com.example.demo.model.Course;
 @RestController
-
-@RequestMapping(path ="/Course")
+@RequestMapping("/Courses")
 public class CoursesResource {
 	
-	
+	 @Autowired
 		private CourseService CourseService;
-
 	    public void CourseResource(CourseService CourseService) {
 	        this.CourseService = CourseService;
 	    }
-	    @ResponseBody
 	    @GetMapping("/all")
 	    public ResponseEntity<List<Course>> getAllCourses () {
 	        List<Course> Courses = CourseService.findAllCourses();
 	        return new ResponseEntity<>(Courses, HttpStatus.OK);
 	    }
-	    
 	    @GetMapping("/find/{id}")
 	    public ResponseEntity<Course> getCourseById (@PathVariable("id") Long id) {
 	    	Course course = CourseService.findCourseById(id);
