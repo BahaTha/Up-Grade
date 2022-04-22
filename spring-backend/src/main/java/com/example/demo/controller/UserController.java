@@ -14,21 +14,21 @@ import com.example.demo.entity.User;
 import com.example.demo.repository.UserRepository;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/users")
 public class UserController {
 	@Autowired
 	private UserRepository userRepository;
 	
 	//get all users
-	@GetMapping("/Users")
+	@GetMapping("/all")
 	public List<User> getAllUsers(){
 		return userRepository.findAll();
 	}
-	@PostMapping("/Users/add")
+	@PostMapping("/add")
 	public void addUser(User user) {
 		userRepository.save(user);
 	}
-	@PostMapping("/Users/update")
+	@PostMapping("/update")
 	public void updateUser(User user) {
 		userRepository.save(user);
 	}

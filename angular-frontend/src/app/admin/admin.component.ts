@@ -8,14 +8,7 @@ import { SidebarAdminComponent } from './sidebar-admin/sidebar-admin.component';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
-export class AdminComponent implements AfterViewInit {
-  
-  @ViewChild(SidebarAdminComponent, {static: false}) 
-  sidebar= SidebarAdminComponent;
-  public msgFromChild1 = '';
+export class AdminComponent implements OnInit {
   constructor() { }
-  ngAfterViewInit() {
-    this.msgFromChild1 = this.sidebar.
-  }
-
+  ngOnInit() { }
 }

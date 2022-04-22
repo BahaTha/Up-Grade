@@ -6,42 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar-admin.component.css']
 })
 export class SidebarAdminComponent implements OnInit {
+  public static msgFromChild1: string;
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  public currentMsgToParent='';
-  public msgFromChild1='';
-
-  msgToParent() { 
-    this.msgFromChild1 = this.currentMsgToParent;
-  }
-  public msgFromChild(){
-    return this.msgFromChild1;
-  }
-  renderDashboard(){
-    this.currentMsgToParent = 'Dashboard';
-  }
-  renderAllCourses(){
-    this.currentMsgToParent = 'AllCourses';
-  }
-  renderManageCourses(){
-    this.currentMsgToParent = 'ManageCourses';
-  }
-  renderAllStudents(){
-    this.currentMsgToParent = 'AllStudents';
-  }
-  renderManageStudents(){
-    this.currentMsgToParent = 'ManageStudents';
-  }
-  renderAllInstructors(){
-    this.currentMsgToParent = 'AllInstructors';
-  }
-  renderManageInstructorss(){
-    this.currentMsgToParent = 'ManageInstructorss';
-  }
-
   title = 'childmenu';
   public menus = new Array();
   public submenu = new Array();
