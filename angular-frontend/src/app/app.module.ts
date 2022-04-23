@@ -26,6 +26,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { SidebarAdminComponent } from './admin/sidebar-admin/sidebar-admin.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from './Services/auth.service';
+
 
 @NgModule({
   declarations: [
@@ -57,8 +61,10 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
