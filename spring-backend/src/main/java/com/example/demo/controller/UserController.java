@@ -18,7 +18,6 @@ import com.example.demo.repository.UserRepository;
 public class UserController {
 	@Autowired
 	private UserRepository userRepository;
-	
 	//get all users
 	@GetMapping("/Users")
 	public List<User> getAllUsers(){
