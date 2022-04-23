@@ -21,7 +21,33 @@ public class User {
 	private String lastname;
 	@Column(name="email_id")
 	private String emailId;
-	
+	@Column(name="password")
+	private String password;
+	public User(long id, String firstname, String lastname, String emailId, String password, String username,
+			Role role) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.emailId = emailId;
+		this.password = password;
+		this.username = username;
+		this.role = role;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	@Column(name="username")
+	private String username;
 	@Column(name="role")
 	@Enumerated(EnumType.STRING)
 	private Role role;

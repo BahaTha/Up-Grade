@@ -24,6 +24,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { SidebarAdminComponent } from './admin/sidebar-admin/sidebar-admin.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from './Services/auth.service';
 import { ManageInstructorsComponent } from './admin/manage-instructors/manage-instructors.component';
 import { ManageCourseComponent } from './admin/manage-course/manage-course.component';
 import { ManageStudentsComponent } from './admin/manage-students/manage-students.component';
@@ -67,6 +70,11 @@ import { AddCourseComponent } from './admin/add-course/add-course.component';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    HttpClientModule,
+    FormsModule
+  ],
+  providers: [AuthService],
+  bootstrap: [AppComponent]
     RouterModule,    
   ],
   providers: [],
