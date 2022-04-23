@@ -34,7 +34,7 @@ import { RouterModule } from '@angular/router';
 import { AddStudentComponent } from './admin/add-student/add-student.component';
 import { AddInstructorComponent } from './admin/add-instructor/add-instructor.component';
 import { AddCourseComponent } from './admin/add-course/add-course.component';
-import { AuthService } from './Services/auth.service';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
