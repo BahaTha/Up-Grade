@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.demo.model.Course;
 
 
-public interface CoursesRepo extends JpaRepository<Course, Long> {
+public interface CoursesRepository extends JpaRepository<Course, Long> {
     void deleteCourseById(Long id);
 
     Course findCourseById(Long id);
