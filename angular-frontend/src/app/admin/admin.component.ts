@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewChild, AfterViewInit } from '@angular/core';
+import { SidebarAdminComponent } from './sidebar-admin/sidebar-admin.component';
+
 
 @Component({
   selector: 'app-admin',
@@ -6,10 +9,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit() { }
 }

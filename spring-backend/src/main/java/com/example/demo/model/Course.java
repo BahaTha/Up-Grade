@@ -27,6 +27,9 @@ import java.io.Serializable;
 			Image = image;
 			Categorie = categorie;
 		}
+		public Course() {
+			
+		}
 		public long getId() {
 			return id;
 		}
