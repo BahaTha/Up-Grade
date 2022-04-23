@@ -26,7 +26,6 @@ import { SidebarAdminComponent } from './admin/sidebar-admin/sidebar-admin.compo
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from './Services/auth.service';
 import { ManageInstructorsComponent } from './admin/manage-instructors/manage-instructors.component';
 import { ManageCourseComponent } from './admin/manage-course/manage-course.component';
 import { ManageStudentsComponent } from './admin/manage-students/manage-students.component';
@@ -35,6 +34,7 @@ import { RouterModule } from '@angular/router';
 import { AddStudentComponent } from './admin/add-student/add-student.component';
 import { AddInstructorComponent } from './admin/add-instructor/add-instructor.component';
 import { AddCourseComponent } from './admin/add-course/add-course.component';
+import { AuthService } from './services/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,13 +71,10 @@ import { AddCourseComponent } from './admin/add-course/add-course.component';
     MatIconModule,
     MatDividerModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
   ],
   providers: [AuthService],
-  bootstrap: [AppComponent]
-    RouterModule,    
-  ],
-  providers: [],
   bootstrap: [AppComponent],
   exports: [
     HeaderAdminComponent,
