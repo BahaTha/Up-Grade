@@ -1,6 +1,8 @@
 package Services;
-import com.example.demo.repository.CoursesRepo;
+
 import com.example.demo.model.Course;
+import com.example.demo.repository.CoursesRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
@@ -9,10 +11,10 @@ import java.util.*;
 @Service
 @Transactional
 public class CourseService {
-    private final CoursesRepo coursesRepo;
+    private final CoursesRepository coursesRepo;
 
     @Autowired
-    public CourseService(CoursesRepo CoursesRepo) {
+    public CourseService(CoursesRepository CoursesRepo) {
         this.coursesRepo = CoursesRepo;
     }
 
