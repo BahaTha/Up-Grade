@@ -11,10 +11,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CoursesComponent } from './courses/courses.component';
 import { SingleCourseComponent } from './courses/single-course/single-course.component';
-import { AddCourseComponent } from './courses/add-course/add-course.component';
 import { EditCourseComponent } from './courses/edit-course/edit-course.component';
 import { InstructorsComponent } from './instructors/instructors.component';
-import { AddInstructorComponent } from './instructors/add-instructor/add-instructor.component';
 import { EditInstructorComponent } from './instructors/edit-instructor/edit-instructor.component';
 import { ProfileInstructorComponent } from './instructors/profile-instructor/profile-instructor.component';
 import { HeaderAdminComponent } from './admin/header-admin/header-admin.component';
@@ -26,7 +24,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { SidebarAdminComponent } from './admin/sidebar-admin/sidebar-admin.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
-
+import { ManageInstructorsComponent } from './admin/manage-instructors/manage-instructors.component';
+import { ManageCourseComponent } from './admin/manage-course/manage-course.component';
+import { ManageStudentsComponent } from './admin/manage-students/manage-students.component';
+import { CategoriesComponent } from './admin/categories/categories.component';
+import { RouterModule } from '@angular/router';
+import { AddStudentComponent } from './admin/add-student/add-student.component';
+import { AddInstructorComponent } from './admin/add-instructor/add-instructor.component';
+import { AddCourseComponent } from './admin/add-course/add-course.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +51,12 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     ProfileInstructorComponent,
     HeaderAdminComponent,
     SidebarAdminComponent,
-    DashboardComponent
+    DashboardComponent,
+    ManageInstructorsComponent,
+    ManageCourseComponent,
+    ManageStudentsComponent,
+    CategoriesComponent,
+    AddStudentComponent
   ],
   imports: [
     BrowserModule,
@@ -57,8 +67,13 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
+    RouterModule,    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    HeaderAdminComponent,
+    SidebarAdminComponent,
+],
 })
 export class AppModule { }
