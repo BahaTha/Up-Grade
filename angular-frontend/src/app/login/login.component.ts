@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
+
 import { AuthService } from '../services/auth.service';
+import { User } from '../user';
 
 
 
@@ -12,21 +14,19 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  
-  password: any
-  username: any
-  message: any
-
-  constructor(private service: AuthService,private router:Router) { }
-
-  ngOnInit() {
+  user:User = new User();
+  constructor(private authService : AuthService,private router:Router) {
+    
   }
-
-  doLogin() {
-    let resp = this.service.login(this.username,this.password);
-    resp.subscribe(data => {this.message=data;
-    this.router.navigate(["/"]);
-    })
-    ;
+  ngOnInit() : void {
   }
+userLogin(){console.log(this.user)
+this.authService.loginUser(this.user).subscribe(data=>{alert("Logged in as "+this.user.username.toString()); 
+this.router.navigate(["/"])},error=>alert("Please verify your details"));
+
+}
+
+
+
+
 }

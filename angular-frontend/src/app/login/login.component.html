@@ -34,22 +34,22 @@
 							<div class="tab-content clearfix" id="tab-login">
 								<div class="card nobottommargin">
 									<div class="card-body" style="padding: 40px;">
-										<form id="accesspanel" action="">
+										<form (ngSubmit)="userLogin()">
 
 											<h3>Login to your Account</h3>
 
 											<div class="col_full">
 												<label for="login-form-username">Username:</label>
-												<input type="text" name="username" [(ngModel)]="username" id="email"  class="form-control">
+												<input type="text" name="username" [(ngModel)]="user.username" id="username"  class="form-control">
 											</div>
 
 											<div class="col_full">
 												<label for="login-form-password">Password:</label>
-												<input type="password" name="password" [(ngModel)]="password" id="password"  class="form-control">
+												<input type="password" name="password" [(ngModel)]="user.password" id="password"  class="form-control">
 											</div>
 
 											<div class="col_full nobottommargin">
-												<input type="submit" name="Login" id="go" value="Login" (click)="doLogin()">
+												<input type="submit" name="Login" id="go" value="Login">
 												<a href="#" class="fright">Forgot Password?</a>
 											</div>
 
