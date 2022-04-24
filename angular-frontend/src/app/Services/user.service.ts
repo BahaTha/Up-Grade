@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { User } from '../user';
 const baseUrl = 'http://localhost:8081/user';
 
 @Injectable({
@@ -17,7 +18,7 @@ export class UserService {
   create(data:any): Observable<any> {
     return this.http.post(baseUrl+'/add', data);
   }
-  update(id:any, data:any): Observable<any> {
+  update(id:any, data:User): Observable<any> {
     return this.http.put(`${baseUrl}/${id}`, data);
   }
   delete(id:any): Observable<any> {

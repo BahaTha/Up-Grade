@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/user';
+import {MatDialog} from '@angular/material/dialog';
+import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.component';
+import { DialogDeleteUserComponent } from '../dialog-delete-user/dialog-delete-user.component';
 
 @Component({
   selector: 'app-manage-instructors',
@@ -17,8 +20,10 @@ export class ManageInstructorsComponent implements OnInit {
     console.log(u);
   }
   modifyUser(u:User){}
-  delteUser(u:User){}
-  constructor(private userService: UserService) { }
+  delteUser(u:User){
+    this.userService.delete(u.id);
+  }
+  constructor(private userService: UserService, public dialog: MatDialog) { }
   ngOnInit(): void {
     this.retrieveusers();
   }
@@ -63,5 +68,37 @@ export class ManageInstructorsComponent implements OnInit {
         error => {
           console.log(error);
         });
+  }
+  startEdit(u : User) {
+    const dialogRef = this.dialog.open(DialogEditUserComponent, {
+      data: u
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 1) {
+
+        // const foundIndex = this.exampleDatabase.dataChange.value.findIndex(x => x.id === this.id);
+        // this.exampleDatabase.dataChange.value[foundIndex] = this.dataService.getDialogData();
+        // And lastly refresh table
+        this.refreshTable();
+      }
+    });
+  }
+
+  deleteItem(u:User) {
+    const dialogRef = this.dialog.open(DialogDeleteUserComponent, {
+      data: {u}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 1) {
+        // const foundIndex = this.exampleDatabase.dataChange.value.findIndex(x => x.id === this.id);
+        // // for delete we use splice in order to remove single object from DataService
+        // this.exampleDatabase.dataChange.value.splice(foundIndex, 1);
+        this.refreshTable();
+      }
+    });
+  }
+  private refreshTable() {
   }
 }
