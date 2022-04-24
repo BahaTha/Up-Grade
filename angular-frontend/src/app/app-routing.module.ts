@@ -14,6 +14,7 @@ import { ManageInstructorsComponent } from './admin/manage-instructors/manage-in
 import { AllCoursesComponent } from './all-courses/all-courses.component';
 import { AddInstructorComponent } from './admin/add-instructor/add-instructor.component';
 import { CategoriesComponent } from './admin/categories/categories.component';
+import { SingleCourseComponent } from './courses/single-course/single-course.component';
 
 const routes: Routes = [  
   { path : 'home' ,component: HomepageComponent},
@@ -30,7 +31,13 @@ const routes: Routes = [
   {path : '', component: HomepageComponent},
   {path : 'login', component: LoginComponent},
   {path : 'register', component: RegisterComponent},
-  {path : 'Courses', component: AllCoursesComponent},
+  {path : 'Courses', component: AllCoursesComponent,children: [
+
+    { path: ':id', component: AllCoursesComponent },
+  
+
+  ]},
+  {path : 'Course/:id', component: SingleCourseComponent},
 ];
 
 @NgModule({

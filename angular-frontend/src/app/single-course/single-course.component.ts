@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Course } from 'src/app/course';
 
 @Component({
   selector: 'app-single-course',
@@ -12,5 +11,5 @@ export class SingleCourseComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  Course:Course= new Course ();
+
 }
