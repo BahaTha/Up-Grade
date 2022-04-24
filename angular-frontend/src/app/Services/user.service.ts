@@ -1,15 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-const baseUrl = 'http://localhost:8081/category';
+import { User } from '../user';
+const baseUrl = 'http://localhost:8081/user';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CategoryService {
+export class UserService {
   constructor(private http: HttpClient) { }
   getAll(): Observable<any> {
     return this.http.get(baseUrl+'/all');
+  }
+  getAllStudent(): Observable<any> {
+    return this.http.get(baseUrl+'/all/student');
+  }
+  getAllInstructor(): Observable<any> {
+    return this.http.get(baseUrl+'/all/instructor');
   }
   get(id:any ): Observable<any> {
     return this.http.get(`${baseUrl}/${id}`);
@@ -17,8 +24,8 @@ export class CategoryService {
   create(data:any): Observable<any> {
     return this.http.post(baseUrl+'/add', data);
   }
-  update(id:any, data:any): Observable<any> {
-    return this.http.put(`${baseUrl}/${id}`, data);
+  update(id:any, data:User): Observable<any> {
+    return this.http.put(`${baseUrl+'/update'}/${id}`, data);
   }
   delete(id:any): Observable<any> {
     return this.http.delete(`${baseUrl+'/delete'}/${id}`);
@@ -26,7 +33,7 @@ export class CategoryService {
   deleteAll(): Observable<any> {
     return this.http.delete(baseUrl);
   }
-  findByname(name:any): Observable<any> {
-    return this.http.get(`${baseUrl}?name=${name}`);
+  findByusername(username:any): Observable<any> {
+    return this.http.get(`${baseUrl}?username=${username}`);
   }
 }

@@ -35,7 +35,6 @@ import { AddStudentComponent } from './admin/add-student/add-student.component';
 import { AddInstructorComponent } from './admin/add-instructor/add-instructor.component';
 import { AddCourseComponent } from './admin/add-course/add-course.component';
 import { AuthService } from './services/auth.service';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +59,7 @@ import { AuthService } from './services/auth.service';
     ManageCourseComponent,
     ManageStudentsComponent,
     CategoriesComponent,
-    AddStudentComponent
+    AddStudentComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +74,7 @@ import { AuthService } from './services/auth.service';
     FormsModule,
     RouterModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService,],
   bootstrap: [AppComponent],
   exports: [
     HeaderAdminComponent,
