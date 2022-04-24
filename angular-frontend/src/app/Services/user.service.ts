@@ -26,7 +26,7 @@ export class UserService {
   deleteAll(): Observable<any> {
     return this.http.delete(baseUrl);
   }
-  findByname(name:any): Observable<any> {
-    return this.http.get(`${baseUrl}?name=${name}`);
+  findByusername(username:any): Observable<any> {
+    return this.http.get(`${baseUrl}?username=${username}`);
   }
 }

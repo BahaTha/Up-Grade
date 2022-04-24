@@ -27,6 +27,14 @@ public class UserController {
 	public List<User> getAllUsers(){
 		return userRepository.findAll();
 	}
+	@GetMapping("/all/student")
+	public List<User> getAllStudents(){
+		return userRepository.findAll();
+	}
+	@GetMapping("/all/instructor")
+	public List<User> getAllInstructors(){
+		return userRepository.findAll();
+	}
 	@PostMapping("/add")
 	public void addUser(User user) {
 		userRepository.save(user);
@@ -46,11 +54,11 @@ public class UserController {
 	public void updateUser(User user) {
 		userRepository.save(user);
 	}
-	@DeleteMapping("/Users/delete")
+	@DeleteMapping("/delete")
 	public void deleteUser(User user) {
 		userRepository.delete(user);
 	}
-	@GetMapping("/Users/role")
+	@GetMapping("/role")
 	public List<User> getUsersByRole(Role role){
 		return userRepository.getUsersByRole(role);
 	}

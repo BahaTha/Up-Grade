@@ -18,9 +18,12 @@ export class AddInstructorComponent implements OnInit {
   }
   userRegister(){
     console.log(this.user)
-    this.registerService.registerUser(this.user).subscribe(data=>{
-    alert("Successfuly registred , welcome "+this.user.username.toString()) ;
-    this.router.navigate(["/"])},error=>alert("Sorry user already exist"));
+    this.registerService.registerUser(this.user).subscribe(
+      data=>{
+        alert("Successfuly registred , welcome "+this.user.username.toString()) ;
+        this.router.navigate(["/admin"])
+      }, 
+      error=>alert("Sorry user already exist"));
 
   };
   onReset() {
