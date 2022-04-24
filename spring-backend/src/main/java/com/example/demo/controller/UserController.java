@@ -38,6 +38,10 @@ public class UserController {
 			return ResponseEntity.ok(user);
 		return (ResponseEntity<?>) ResponseEntity.internalServerError();
 		}
+	@PostMapping("/register")
+	public ResponseEntity<User> registerUser(@RequestBody User user) {
+		return  ResponseEntity.ok(userRepository.save(user));
+		}
 	@PostMapping("/update")
 	public void updateUser(User user) {
 		userRepository.save(user);

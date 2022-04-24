@@ -38,40 +38,44 @@
 									<div class="card-body" style="padding: 40px;">
 										<h3>Register for an Account</h3>
 
-										<form id="register-form" name="register-form" class="nobottommargin" action="#" method="post">
+										<form class="nobottommargin" (ngSubmit)="userRegister()" >
 
 											<div class="col_full">
-												<label for="register-form-name">Name:</label>
-												<input type="text" id="register-form-name" name="register-form-name" value="" class="form-control" />
+												<label for="register-form-name">First Name:</label>
+												<input type="text"  [(ngModel)]="user.firstname" id="firstname" name="firstname"  class="form-control" /> 
 											</div>
-
+											<div class="col_full">
+												<label for="register-form-name">Last Name:</label>
+												<input type="text"  [(ngModel)]="user.lastname" id="lastname" name="lastname" class="form-control" /> 
+											</div>
+                                             
 											<div class="col_full">
 												<label for="register-form-email">Email Address:</label>
-												<input type="text" id="register-form-email" name="register-form-email" value="" class="form-control" />
+												<input type="text" [(ngModel)]="user.emailId" id="emailId" name="emailId" class="form-control" />
 											</div>
 
 											<div class="col_full">
 												<label for="register-form-username">Choose a Username:</label>
-												<input type="text" id="register-form-username" name="register-form-username" value="" class="form-control" />
+												<input type="text" [(ngModel)]="user.username" id="username" name="username" class="form-control" />
 											</div>
-
-											<div class="col_full">
-												<label for="register-form-phone">Phone:</label>
-												<input type="text" id="register-form-phone" name="register-form-phone" value="" class="form-control" />
-											</div>
-
+										
 											<div class="col_full">
 												<label for="register-form-password">Choose Password:</label>
-												<input type="password" id="register-form-password" name="register-form-password" value="" class="form-control" />
+												<input type="password"  [(ngModel)]="user.password" id="password" name="password" class="form-control" />
 											</div>
-
 											<div class="col_full">
-												<label for="register-form-repassword">Re-enter Password:</label>
-												<input type="password" id="register-form-repassword" name="register-form-repassword" value="" class="form-control" />
+												<label for="register-form-username">Choose a Role</label>
+												<select [(ngModel)]="user.role" id="role" name="role" class="form-control" >
+													<option *ngFor="let role of roles">
+														{{ role }}
+													</option>
+											
+											</select>
 											</div>
+										
 
 											<div class="col_full nobottommargin">
-												<button class="button button-3d button-black nomargin" id="register-form-submit" name="register-form-submit" value="register">Register Now</button>
+												<input type="submit" class="button button-3d button-black nomargin" id="register-form-submit" name="register-form-submit" value="register">
 											</div>
 
 										</form>

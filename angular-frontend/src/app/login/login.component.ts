@@ -15,11 +15,13 @@ import { User } from '../user';
 export class LoginComponent implements OnInit {
 
   user:User = new User();
-  constructor(private authService : AuthService,private router:Router) {}
+  constructor(private authService : AuthService,private router:Router) {
+    
+  }
   ngOnInit() : void {
   }
 userLogin(){console.log(this.user)
-this.authService.loginUser(this.user).subscribe(data=>{alert("Logged in"); 
+this.authService.loginUser(this.user).subscribe(data=>{alert("Logged in as "+this.user.username.toString()); 
 this.router.navigate(["/"])},error=>alert("Please verify your details"));
 
 }
