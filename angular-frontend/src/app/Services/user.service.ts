@@ -25,10 +25,10 @@ export class UserService {
     return this.http.post(baseUrl+'/add', data);
   }
   update(id:any, data:User): Observable<any> {
-    return this.http.put(`${baseUrl+'/update'}/${id}`, data);
+    return this.http.put(`${baseUrl+'/update/'}${id}`, data);
   }
   delete(id:any): Observable<any> {
-    return this.http.delete(`${baseUrl+'/delete'}/${id}`);
+    return this.http.delete(`${baseUrl+'/delete/'}${id}`);
   }
   deleteAll(): Observable<any> {
     return this.http.delete(baseUrl);
