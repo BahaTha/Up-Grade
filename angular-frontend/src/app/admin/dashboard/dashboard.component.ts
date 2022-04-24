@@ -16,9 +16,13 @@ export class DashboardComponent implements OnInit {
   roles= ['student','student'];
   selected="student";
   users: any;
+  usernumber:number=0;
+  instructornumber:number=0;
+  studentnumber:number=0;
   currentuser:User = new User();
   currentIndex = -1;
   username = '';
+
   public editpressed:boolean=false;
   user:User = new User();
   validateUser(u:User){
@@ -50,10 +54,27 @@ export class DashboardComponent implements OnInit {
       .subscribe(
         data => {
           this.users = data;
+          this.usernumber=data.length;
         },
         error => {
           console.log(error);
         });
+        this.userService.getAllStudent()
+        .subscribe(
+          data => {
+            this.studentnumber=data.length;
+          },
+          error => {
+            console.log(error);
+          });
+          this.userService.getAllInstructor()
+        .subscribe(
+          data => {
+            this.instructornumber=data.length;
+          },
+          error => {
+            console.log(error);
+          });
   }
   refreshList(): void {
     this.retrieveusers();
