@@ -22,11 +22,11 @@ export class LoginComponent implements OnInit {
   }
 userLogin(){console.log(this.user)
 this.authService.loginUser(this.user).subscribe(data=>{alert("Logged in as "+this.user.username.toString()); 
-this.router.navigate(["/"])},error=>alert("Please verify your details"));
+this.router.navigate(["/"]) ; 
+},error=>alert("Please verify your details"));
 
 }
-
-
+currentUser(){return(this.user.username)};
 
 
 }
