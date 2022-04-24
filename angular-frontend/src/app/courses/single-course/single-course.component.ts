@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from 'src/app/course';
 
+
 @Component({
   selector: 'app-single-course',
   templateUrl: './single-course.component.html',
