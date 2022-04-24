@@ -12,6 +12,12 @@ export class UserService {
   getAll(): Observable<any> {
     return this.http.get(baseUrl+'/all');
   }
+  getAllStudent(): Observable<any> {
+    return this.http.get(baseUrl+'/all/student');
+  }
+  getAllInstructor(): Observable<any> {
+    return this.http.get(baseUrl+'/all/instructor');
+  }
   get(id:any ): Observable<any> {
     return this.http.get(`${baseUrl}/${id}`);
   }
@@ -19,7 +25,7 @@ export class UserService {
     return this.http.post(baseUrl+'/add', data);
   }
   update(id:any, data:User): Observable<any> {
-    return this.http.put(`${baseUrl}/${id}`, data);
+    return this.http.put(`${baseUrl+'/update'}/${id}`, data);
   }
   delete(id:any): Observable<any> {
     return this.http.delete(`${baseUrl+'/delete'}/${id}`);

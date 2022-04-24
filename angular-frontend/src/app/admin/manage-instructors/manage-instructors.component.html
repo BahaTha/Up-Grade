@@ -87,17 +87,12 @@
                         <div class="sparkline13-list">
                             <div class="sparkline13-hd">
                                 <div class="main-sparkline13-hd">
-                                    <h1>Projects <span class="table-project-n">Data</span> Table</h1>
+                                    <h1><span class="table-project-n">Manage instructors</span> </h1>
                                 </div>
                             </div>
                             <div class="sparkline13-graph">
                                 <div class="datatable-dashv1-list custom-datatable-overright">
                                     <div id="toolbar">
-                                        <!-- <select class="form-control dt-tb">
-											<option value="">Export Basic</option>
-											<option value="all">Export All</option>
-											<option value="selected">Export Selected</option>
-										</select> -->
                                     </div>
                                     <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
                                         data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar"
@@ -134,13 +129,60 @@
                                                 <td class="datatable-ct">
                                                   <a (click)="validateUser(currentuser)" style="cursor: pointer;"><i class="fa fa-check fa-2x" style="margin-right: 10px; color:green;"></i></a>
                                                 <a (click)="modifyUser(currentuser)" style="cursor: pointer;"> <i class="fa fa-pencil-square-o fa-2x" style="margin-right: 10px; color: blue;"> </i></a>
-                                                <a (click)="delteUser(currentuser)" style="cursor: pointer;"> <i class="fa fa-trash-o fa-2x"  style=" color: red;"> </i></a></td>
+                                                <a (click)="deleteUser(currentuser)" style="cursor: pointer;"> <i class="fa fa-trash-o fa-2x"  style=" color: red;"> </i></a></td>
                                             </tr>
                                             
                                         </tbody>
                                     </table>
+                                    
                                 </div>
                             </div>
+                            <div class="toolbar" *ngIf="editpressed">
+                              <form class="nobottommargin" (ngSubmit)="userUpdate()" style="background-color: #D3D3D3; padding: 20px;">
+                          
+                                  <div class="col_full">
+                                      <label for="register-form-name">First Name:</label>
+                                      <input type="text"  [(ngModel)]="user.firstname" id="firstname" name="firstname"  class="form-control"/>
+                                  </div>
+                                  <div class="col_full">
+                                      <label for="register-form-name">Last Name:</label>
+                                      <input type="text"  [(ngModel)]="user.lastname" id="lastname" name="lastname" class="form-control" /> 
+                                  </div>
+                                   
+                                  <div class="col_full">
+                                      <label for="register-form-email">Email Address:</label>
+                                      <input type="text" [(ngModel)]="user.emailId" id="emailId" name="emailId" class="form-control" />
+                                  </div>
+                          
+                                  <div class="col_full">
+                                      <label for="register-form-username">Choose a Username:</label>
+                                      <input type="text" [(ngModel)]="user.username" id="username" name="username" class="form-control" />
+                                  </div>
+                              
+                                  <div class="col_full">
+                                      <label for="register-form-password">Choose Password:</label>
+                                      <input type="password"  [(ngModel)]="user.password" id="password" name="password" class="form-control" />
+                                  </div>
+                                  <div class="col_full">
+                                      <label for="register-form-username">Choose a Role</label>
+                                      <select [(ngModel)]="user.role" id="role" name="role" class="form-control" >
+                                          <option *ngFor="let role of roles">
+                                              {{ role }}
+                                          </option>
+                                  </select>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="payment-adress">
+                                            <br>
+                                              <button type="submit" class="btn btn-primary waves-effect waves-light"  id="register-form-submit" name="register-form-submit" value="register">Update</button>
+                                              <button class="btn btn-secondary" type="reset" style="background-color: aliceblue; margin-left: 10px;" (click)="onReset()">Cancel</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </form>
+                          
+                          </div>
                         </div>
                     </div>
                 </div>

@@ -1,38 +1,54 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/user';
-import {MatDialog} from '@angular/material/dialog';
-import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.component';
-import { DialogDeleteUserComponent } from '../dialog-delete-user/dialog-delete-user.component';
-
 @Component({
   selector: 'app-manage-instructors',
   templateUrl: './manage-instructors.component.html',
   styleUrls: ['./manage-instructors.component.css']
 })
 export class ManageInstructorsComponent implements OnInit {
+  constructor(private userService: UserService, private router:Router) { }
+  ngOnInit(): void {
+    this.retrieveusers();
+  }
+  roles= ['student','instructor'];
+  selected="student";
   users: any;
   currentuser:User = new User();
   currentIndex = -1;
   username = '';
-
+  public editpressed:boolean=false;
+  user:User = new User();
   validateUser(u:User){
     console.log(u);
+  this.editpressed=!this.editpressed;
+
   }
-  modifyUser(u:User){}
-  delteUser(u:User){
+  modifyUser(u:User){
+    this.user=u;
+    this.editpressed=true;
+    
+  }
+  deleteUser(u:User){
+    console.log(u);
     this.userService.delete(u.id);
+    this.refreshList();
   }
-  constructor(private userService: UserService, public dialog: MatDialog) { }
-  ngOnInit(): void {
-    this.retrieveusers();
+  updateName() {
+    console.log(this.user.emailId);
+    this.user= this.user;
+    console.log(this.user);
+    
+  }
+  onReset(){
+    this.editpressed=false;
   }
   retrieveusers(): void {
-    this.userService.getAll()
+    this.userService.getAllInstructor()
       .subscribe(
         data => {
           this.users = data;
-          console.log(data);
         },
         error => {
           console.log(error);
@@ -69,36 +85,9 @@ export class ManageInstructorsComponent implements OnInit {
           console.log(error);
         });
   }
-  startEdit(u : User) {
-    const dialogRef = this.dialog.open(DialogEditUserComponent, {
-      data: u
-    });
+  userUpdate(){
+    console.log(this.user)
+    this.userService.update(this.user.id, this.user);
 
-    dialogRef.afterClosed().subscribe(result => {
-      if (result === 1) {
-
-        // const foundIndex = this.exampleDatabase.dataChange.value.findIndex(x => x.id === this.id);
-        // this.exampleDatabase.dataChange.value[foundIndex] = this.dataService.getDialogData();
-        // And lastly refresh table
-        this.refreshTable();
-      }
-    });
-  }
-
-  deleteItem(u:User) {
-    const dialogRef = this.dialog.open(DialogDeleteUserComponent, {
-      data: {u}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result === 1) {
-        // const foundIndex = this.exampleDatabase.dataChange.value.findIndex(x => x.id === this.id);
-        // // for delete we use splice in order to remove single object from DataService
-        // this.exampleDatabase.dataChange.value.splice(foundIndex, 1);
-        this.refreshTable();
-      }
-    });
-  }
-  private refreshTable() {
   }
 }

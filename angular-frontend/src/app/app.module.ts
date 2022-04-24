@@ -35,10 +35,6 @@ import { AddStudentComponent } from './admin/add-student/add-student.component';
 import { AddInstructorComponent } from './admin/add-instructor/add-instructor.component';
 import { AddCourseComponent } from './admin/add-course/add-course.component';
 import { AuthService } from './services/auth.service';
-import { DialogEditUserComponent } from './admin/dialog-edit-user/dialog-edit-user.component';
-import { DialogDeleteUserComponent } from './admin/dialog-delete-user/dialog-delete-user.component';
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,8 +60,6 @@ import { DialogDeleteUserComponent } from './admin/dialog-delete-user/dialog-del
     ManageStudentsComponent,
     CategoriesComponent,
     AddStudentComponent,
-    DialogEditUserComponent,
-    DialogDeleteUserComponent
   ],
   imports: [
     BrowserModule,
@@ -80,12 +74,11 @@ import { DialogDeleteUserComponent } from './admin/dialog-delete-user/dialog-del
     FormsModule,
     RouterModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService,],
   bootstrap: [AppComponent],
   exports: [
     HeaderAdminComponent,
     SidebarAdminComponent,
-    MatButtonModule,
 ],
 })
 export class AppModule { }
