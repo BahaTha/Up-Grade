@@ -14,5 +14,9 @@ public interface UserRepository extends JpaRepository<User, Long>{
 	//@Modifying
 	@Query(value="select * from Users where Users.Role = ?1 ",nativeQuery=true)
 	public List<User> getUsersByRole(Role role);
+
+	
+
+	public User findById(long id);
 	
 }
