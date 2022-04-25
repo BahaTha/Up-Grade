@@ -10,7 +10,6 @@ import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CoursesComponent } from './courses/courses.component';
-import { SingleCourseComponent } from './courses/single-course/single-course.component';
 import { EditCourseComponent } from './courses/edit-course/edit-course.component';
 import { InstructorsComponent } from './instructors/instructors.component';
 import { EditInstructorComponent } from './instructors/edit-instructor/edit-instructor.component';
@@ -37,6 +36,7 @@ import { AddCourseComponent } from './admin/add-course/add-course.component';
 import { AuthService } from './services/auth.service';
 import { AllCoursesComponent } from './all-courses/all-courses.component';
 import { UserService } from './services/user.service';
+import { SingleCourseComponent } from './single-course/single-course.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,7 @@ import { UserService } from './services/user.service';
     HeaderComponent,
     FooterComponent,
     CoursesComponent,
-    SingleCourseComponent,
+  SingleCourseComponent,
     AddCourseComponent,
     EditCourseComponent,
     InstructorsComponent,
@@ -63,8 +63,7 @@ import { UserService } from './services/user.service';
     ManageStudentsComponent,
     CategoriesComponent,
     AddStudentComponent,
-    AllCoursesComponent,
-    SingleCourseComponent
+    AllCoursesComponent
   ],
   imports: [
     BrowserModule,
@@ -78,13 +77,14 @@ import { UserService } from './services/user.service';
     HttpClientModule,
     FormsModule,
     RouterModule,
-    
   ],
   providers: [AuthService,UserService],
   bootstrap: [AppComponent],
   exports: [
     HeaderAdminComponent,
     SidebarAdminComponent,
+    HeaderComponent,
+    FooterComponent
 ],
 })
 export class AppModule { }

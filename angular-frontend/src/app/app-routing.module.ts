@@ -17,7 +17,7 @@ import { CategoriesComponent } from './admin/categories/categories.component';
 import { SingleCourseComponent } from './single-course/single-course.component';
 
 const routes: Routes = [  
-  {path : 'home' ,component: HomepageComponent},
+  { path : 'home' ,component: HomepageComponent},
   {path : 'courses', component: CoursesComponent},
   {path : 'instructors', component: InstructorsComponent},
   {path : 'admin', component: AdminComponent},
