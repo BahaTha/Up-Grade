@@ -63,8 +63,6 @@ import { SingleCourseComponent } from './single-course/single-course.component';
     CategoriesComponent,
     AddStudentComponent,
     AllCoursesComponent
-  
-   
   ],
   imports: [
     BrowserModule,
@@ -78,9 +76,8 @@ import { SingleCourseComponent } from './single-course/single-course.component';
     HttpClientModule,
     FormsModule,
     RouterModule,
-   
   ],
-  providers: [AuthService],
+  providers: [AuthService,],
   bootstrap: [AppComponent],
   exports: [
     HeaderAdminComponent,
