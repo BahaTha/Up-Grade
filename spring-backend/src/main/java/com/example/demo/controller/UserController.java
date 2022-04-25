@@ -72,7 +72,7 @@ public class UserController {
 	public List<User> getUsersByRole(Role role){
 		return userRepository.getUsersByRole(role);
 	}
-	@PutMapping("/update/{id}")
+	@PostMapping("/update/{id}")
     public ResponseEntity<User> updateUser(@PathVariable(value = "id") Long id,
         @RequestBody User userdata) throws ResourceNotFoundException {
         User user = userRepository.findById(id)
