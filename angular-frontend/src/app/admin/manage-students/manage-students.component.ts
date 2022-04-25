@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { response } from 'express';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/user';
 @Component({
@@ -30,11 +31,7 @@ export class ManageStudentsComponent implements OnInit {
     this.editpressed=true;
     
   }
-  deleteUser(u:User){
-    console.log(u);
-    this.userService.delete(u.id);
-    this.refreshList();
-  }
+  
   updateName() {
     console.log(this.user.emailId);
     this.user= this.user;
@@ -87,7 +84,18 @@ export class ManageStudentsComponent implements OnInit {
   }
   userUpdate(){
     console.log(this.user)
-    this.userService.update(this.user.id, this.user);
+    this.userService.update(this.user.id, this.user).subscribe(response => {console.log(response);
+    this.router.navigate(['/admin/students/manage']);},error =>{console.log(error);
+    
+    });
 
+  }
+  deleteUser(u:User){
+    console.log(u);
+    this.userService.delete(u.id).subscribe(response => {console.log(response);
+      this.router.navigate(['/admin/students/manage']);},error =>{console.log(error);
+      
+      });
+    this.refreshList();
   }
 }

@@ -35,6 +35,7 @@ import { AddInstructorComponent } from './admin/add-instructor/add-instructor.co
 import { AddCourseComponent } from './admin/add-course/add-course.component';
 import { AuthService } from './services/auth.service';
 import { AllCoursesComponent } from './all-courses/all-courses.component';
+import { UserService } from './services/user.service';
 import { SingleCourseComponent } from './single-course/single-course.component';
 
 @NgModule({
@@ -77,7 +78,7 @@ import { SingleCourseComponent } from './single-course/single-course.component';
     FormsModule,
     RouterModule,
   ],
-  providers: [AuthService,],
+  providers: [AuthService,UserService],
   bootstrap: [AppComponent],
   exports: [
     HeaderAdminComponent,
