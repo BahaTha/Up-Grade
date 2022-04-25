@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { CoursesService } from '../services/courses.service';
+import { CoursesService } from '../Services/courses.service';
+
 
 @Component({
   selector: 'app-all-courses',
