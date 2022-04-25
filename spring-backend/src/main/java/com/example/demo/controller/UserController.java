@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -57,15 +58,14 @@ public class UserController {
 		}
 	
 	@DeleteMapping("/delete/{id}")
-    public Map<String, Boolean> deleteEmployee(@PathVariable(value = "id") Long userId)
-            throws ResourceNotFoundException {
-        User user = userRepository.findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + userId));
-
-        userRepository.delete(user);
-        Map<String, Boolean> response = new HashMap<>();
-        response.put("deleted", Boolean.TRUE);
-        return response;
+    public ResponseEntity<HttpStatus> deleteUser(@PathVariable(value = "id") Long userId){
+         try { 
+        	 userRepository.deleteById(userId);
+        	 return new ResponseEntity <>(HttpStatus.NO_CONTENT);
+         }catch (Exception e) {
+        	 return new ResponseEntity <>(HttpStatus.INTERNAL_SERVER_ERROR);
+         }
+        	 
     }
 	
 	@GetMapping("/role")
@@ -73,16 +73,19 @@ public class UserController {
 		return userRepository.getUsersByRole(role);
 	}
 	@PutMapping("/update/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable(value = "id") Long id,
-        @RequestBody User userdata) throws ResourceNotFoundException {
-        User user = userRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("User not found for this id :: " + id));
-        user.setEmailId(userdata.getEmailId());
-        user.setLastname(userdata.getLastname());
-        user.setFirstname(userdata.getFirstname());
-        user.setUsername(userdata.getUsername() );
-        user.setPassword(userdata.getPassword());
-        final User updatedUser = userRepository.save(user);
-        return ResponseEntity.ok(updatedUser);
+    public ResponseEntity<User> updateUser(@PathVariable(value = "id") Long id,@RequestBody User user) throws ResourceNotFoundException {
+        Optional<User> userdata = userRepository.findById(id) ;
+              if(userdata.isPresent())
+        {
+            User newuser = userdata.get();
+            newuser.setEmailId(user.getEmailId());
+        
+            newuser.setLastname(user.getLastname());
+            newuser.setFirstname(user.getFirstname());
+            newuser.setUsername(user.getUsername() );
+            newuser.setPassword(user.getPassword());
+            return new ResponseEntity <>(userRepository.save(newuser),HttpStatus.OK);
+        }else
+        {return new ResponseEntity <>(HttpStatus.NOT_FOUND);
     }
-}
+}}

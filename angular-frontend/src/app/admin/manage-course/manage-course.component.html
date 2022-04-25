@@ -101,23 +101,16 @@
                                             <tr >
                                                 <th data-field="state" data-checkbox="true"></th>
                                                 <th data-field="id">ID</th>
-                                                <th data-field="firstname" data-editable="true">First name</th>
-                                                <th data-field="lastname" data-editable="true">Last name</th>
-                                                <th data-field="username" data-editable="true">Username</th>
-                                                <th data-field="emailId" data-editable="true">Email</th>
-                                                <th data-field="role" data-editable="true">Role</th>
+                                                <th data-field="firstname" data-editable="true">Title</th>
+                                                <th data-field="lastname" data-editable="true">Image</th>
+                                                <th data-field="username" data-editable="true">Creation Date</th>
+                                                <th data-field="emailId" data-editable="true">category</th>
+                                                <th data-field="role" data-editable="true">Videos</th>
                                                 <th data-field="action">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                          <!-- id!: number
-                                                firstname!: string;
-                                                lastname! : string;
-                                                emailId! : string;
-                                                  role! : Role;
-                                                  username!:string;
-                                                  password!:string;
-                                                  name!:string; -->
+                                          
                                             <tr *ngFor="let currentuser of users">
                                                 <td></td>
                                                 <td>{{ currentuser.id }}</td>

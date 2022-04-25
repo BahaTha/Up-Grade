@@ -32,7 +32,10 @@ export class ManageInstructorsComponent implements OnInit {
   }
   deleteUser(u:User){
     console.log(u);
-    this.userService.delete(u.id);
+    this.userService.delete(u.id).subscribe(response => {console.log(response);
+      this.router.navigate(['/admin/instructors/manage']);},error =>{console.log(error);
+      
+      });
     this.refreshList();
   }
   updateName() {
@@ -87,7 +90,10 @@ export class ManageInstructorsComponent implements OnInit {
   }
   userUpdate(){
     console.log(this.user)
-    this.userService.update(this.user.id, this.user);
+    this.userService.update(this.user.id, this.user).subscribe(response => {console.log(response);
+      this.router.navigate(['/admin/instructors/manage']);},error =>{console.log(error);
+      
+      });
 
   }
 }

@@ -1,4 +1,4 @@
-<html dir="ltr" lang="en-US">
+
 <head>
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -114,18 +114,7 @@
 
 						<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
 
-						<ul>
-							<li><a href="#" class="pl-0"><div><i class="icon-line-grid"></i>All Categories</div></a>
-								
-									</li>
-									<li><a href="#"><div><i class="icon-line2-crop"></i>Design</div></a>
-									
-									</li>
-
-									<li><a href="#"><div><i class="icon-food"></i>Food</div></a>
-										
-									</li>
-								</ul>
+						
 						
 						
 
@@ -133,20 +122,27 @@
 
 						<!-- Top Search
 						============================================= -->
-						<div id="top-search" class="ml-3">
-							<a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-							<form action="search.html" method="get">
-								<input type="text" name="q" class="form-control" value="" placeholder="Find Your Courses Here..">
-							</form>
-						</div><!-- #top-search end -->
+					
+						
+							<div *ngIf="loggedin()==true ;else loggedOut">
+								<div class="header-buttons">
+							
+								  <a href="#" class="button button-rounded button-small ml-2">Profile</a>
+								  <button (click)="logOut()" class="button button-rounded button-border button-small">Log out</button>
+								</div>
+							</div>
+							  
+							  <ng-template #loggedOut>
+								<div class="header-buttons">
+									<a href="/login" class="button button-rounded button-border button-small">Log In</a>
+									<a href="/register" class="button button-rounded button-small ml-2">Sign Up</a>
+								</div>
+							  </ng-template>
 
-						<div class="header-buttons">
-							<a href="/login" class="button button-rounded button-border button-small">Log In</a>
-							<a href="/register" class="button button-rounded button-small ml-2">Sign Up</a>
-						</div>
-
+							
+					
 					</div>
-
+					
 				</nav><!-- #primary-menu end -->
 
 			</div>
