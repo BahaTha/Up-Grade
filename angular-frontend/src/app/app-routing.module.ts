@@ -16,7 +16,7 @@ import { AddInstructorComponent } from './admin/add-instructor/add-instructor.co
 import { CategoriesComponent } from './admin/categories/categories.component';
 
 const routes: Routes = [  
-  { path : 'home' ,component: HomepageComponent},
+  {path : 'home' ,component: HomepageComponent},
   {path : 'courses', component: CoursesComponent},
   {path : 'instructors', component: InstructorsComponent},
   {path : 'admin', component: AdminComponent},
