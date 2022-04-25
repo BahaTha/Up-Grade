@@ -1,6 +1,4 @@
 package com.example.demo.model;
-
-import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.Column;
